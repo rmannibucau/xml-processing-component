@@ -84,10 +84,10 @@ public class XmlProcessingService {
     }
 
     public Function<byte[], String> createXSLTTransformer(final String xslt, final boolean indent) {
-        final TransformerFactory tFactory = TransformerFactory.newInstance();
+        final TransformerFactory factory = TransformerFactory.newInstance();
         final Transformer transformer;
         try {
-            transformer = tFactory.newTransformer(toSource(xslt));
+            transformer = factory.newTransformer(toSource(xslt));
         } catch (final TransformerConfigurationException e) {
             throw new IllegalArgumentException(e);
         }

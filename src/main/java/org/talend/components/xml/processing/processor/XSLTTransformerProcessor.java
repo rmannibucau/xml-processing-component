@@ -18,10 +18,10 @@ import org.talend.sdk.component.api.processor.Processor;
 import org.talend.sdk.component.api.record.Record;
 import org.talend.sdk.component.api.service.record.RecordBuilderFactory;
 
-@Version(1) // default version is 1, if some configuration changes happen between 2 versions you can add a migrationHandler
-@Icon(Icon.IconType.STAR) // you can use a custom one using @Icon(value=CUSTOM, custom="filename") and adding icons/filename_icon32.png in resources
+@Version
+@Icon(Icon.IconType.FILE_XML_O)
 @Processor(name = "XSLTTransformer")
-@Documentation("TODO fill the documentation for this processor")
+@Documentation("Apply a XSLT transformation to a XML field of the incoming record.")
 public class XSLTTransformerProcessor implements Serializable {
     private final XSLTTransformerProcessorConfiguration configuration;
     private final XmlProcessingService service;
